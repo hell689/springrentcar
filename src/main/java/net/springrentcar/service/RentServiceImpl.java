@@ -1,13 +1,11 @@
 package net.springrentcar.service;
 
 import net.springrentcar.domain.Rent;
-import net.springrentcar.repo.RentRepo;
 import net.springrentcar.repo.RentRepository;
 import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
-import java.util.Objects;
 
 @Service
 public class RentServiceImpl implements RentService {

@@ -23,8 +23,8 @@ public interface CarRepository extends CrudRepository<Car, Long> {
 
     List<Car> findByMark(Mark mark);
 
-    //@Query("select c from cars c where c.id not in (select r.car FROM rents r where r.end_date > :date )")
-    //List<Car> findFreeCar(@Param("date") Date date);
+    @Query("select c from Car c where c.id not in (select r.car FROM Rent r where r.endDate > :date )")
+    List<Car> findFreeCar(@Param("date") Date date);
 
     List<Car> findByVolume(float volume);
 }

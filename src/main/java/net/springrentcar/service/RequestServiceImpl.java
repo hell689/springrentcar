@@ -1,13 +1,11 @@
 package net.springrentcar.service;
 
 import net.springrentcar.domain.Request;
-import net.springrentcar.repo.RequestRepo;
 import net.springrentcar.repo.RequestRepository;
 import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
-import java.util.Objects;
 
 @Service
 public class RequestServiceImpl implements RequestService {
@@ -19,7 +17,7 @@ public class RequestServiceImpl implements RequestService {
 
     @Override
     public List<Request> findAll() {
-        Iterable<Request> requests =requestRepo.findAll();
+        Iterable<Request> requests = requestRepo.findAll();
         return (List<Request>) requests;
     }
 

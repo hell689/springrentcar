@@ -2,10 +2,8 @@ package net.springrentcar.service;
 
 import net.springrentcar.domain.Car;
 import net.springrentcar.domain.Request;
-import net.springrentcar.repo.CarRepo;
 import net.springrentcar.repo.CarRepository;
 import org.springframework.dao.DataIntegrityViolationException;
-import org.springframework.jdbc.core.ResultSetExtractor;
 import org.springframework.stereotype.Service;
 
 import java.util.*;
@@ -42,8 +40,7 @@ public class CarServiceImpl implements CarService {
 
     @Override
     public List<Car> getFreeCars(Date date) {
-        return null;
-        //return carRepo.findFreeCar(date);
+        return carRepo.findFreeCar(date);
     }
 
     @Override
